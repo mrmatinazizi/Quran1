@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Amiri", serif;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  direction: rtl;
+  @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+}
+
+:root.dark body {
+  @apply bg-gray-950 text-gray-100;
+}
+
+.font-arabic {
+  font-family: "Amiri", serif;
+}
