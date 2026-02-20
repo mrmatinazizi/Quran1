@@ -115,32 +115,9 @@ const Hadith = () => {
           ${isSidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
         `} onClick={() => setIsSidebarOpen(false)} />
 
-        <div className={`
-          fixed inset-y-0 right-0 z-50 w-3/4 max-w-xs bg-white shadow-xl transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-auto lg:shadow-none lg:bg-transparent lg:col-span-1 dark:bg-gray-900 lg:dark:bg-transparent
-          ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
-        `}>
-          <div className="h-full flex flex-col lg:h-auto">
-            <div className="p-4 border-b border-gray-100 lg:hidden flex justify-between items-center dark:border-gray-800">
-              <h3 className="font-bold text-gray-800 dark:text-gray-100">فهرست کتاب‌ها</h3>
-              <button onClick={() => setIsSidebarOpen(false)} className="dark:text-gray-400"><X className="w-5 h-5" /></button>
-            </div>
-            
-            <div className="p-4 lg:p-0 flex-1 overflow-y-auto">
-              <h3 className="hidden lg:flex font-bold text-gray-700 mb-4 items-center gap-2 dark:text-gray-200">
-                <Book className="w-5 h-5 text-sky-600 dark:text-sky-400" />
-                فهرست کتاب‌ها
-              </h3>
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden lg:max-h-[calc(100vh-200px)] overflow-y-auto dark:bg-gray-800 dark:border-gray-700">
-                <button
-                  onClick={() => {
-                    setSelectedBook(null);
-                    setCurrentPage(1);
-                    setIsSidebarOpen(false);
-                  }}
-                  className={`w-full text-right px-4 py-3 hover:bg-sky-50 hover:text-sky-600 transition-colors border-b border-gray-50 last:border-0 flex justify-between items-center text-sm dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:text-sky-400 ${
-                    selectedBook === null ? 'bg-sky-50 text-sky-600 font-bold dark:bg-sky-900/30 dark:text-sky-400' : 'text-gray-700 dark:text-gray-300'
-                  }`}
-                >
+
+
+        
                   <span>همه کتاب‌ها</span>
                 </button>
                 {bukhariBooks.map((book) => (
