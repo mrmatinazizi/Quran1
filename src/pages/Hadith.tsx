@@ -5,7 +5,7 @@ import hadithData from '../data/hadith.json';
 
 const Hadith = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedBook, setSelectedBook] = useState<string | null>(null);
+  //const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [copiedId, setCopiedId] = useState<number | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
